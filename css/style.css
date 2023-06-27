@@ -117,7 +117,7 @@ body {
 .wrapper {
   min-height: 100%;
   overflow: hidden;
-  background-image: url(../img/background-1.jpg);
+  background-image: url(../img/background-2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -295,8 +295,16 @@ h1 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding: 0 15px 30px;
+  border-radius: 10px;
   margin: 0 auto;
+  background-color: rgba(190, 19, 19, 0.4);
   cursor: none;
+}
+@media (max-width: 425px) {
+  .game {
+    padding: 15px 30px;
+  }
 }
 
 .start {
@@ -307,7 +315,7 @@ h1 {
   -webkit-transition: 0.2s linear;
   -o-transition: 0.2s linear;
   transition: 0.2s linear;
-  background: rgba(190, 19, 19, 0.7);
+  background: rgba(190, 19, 19, 0.6);
   padding: 0 15px;
   font-size: 3rem;
   letter-spacing: 0.2rem;
