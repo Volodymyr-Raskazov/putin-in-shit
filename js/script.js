@@ -3,6 +3,7 @@ const holes = document.querySelectorAll('.hole');
 const scoreBoard = document.querySelector('.score');
 const moles = document.querySelectorAll('.mole');
 const boom = document.querySelector('.boom');
+const gameTime = 20000;
 
 let lastHole;
 let timeUp = false;
@@ -29,7 +30,7 @@ const randomHole = (holes) => {
 
 const peep = () => {
 	if (!timeUp) {
-		const time = randomTime(300, 900);
+		const time = randomTime(400, 1000);
 		const hole = randomHole(holes);
 		hole.classList.add('up');
 		setTimeout(() => {
@@ -40,7 +41,7 @@ const peep = () => {
 }
 
 const countdown = () => {
-	let time = 10;
+	let time = gameTime / 1000;
 	startBtn.textContent = `${time}s left`;
 	const timerId = setInterval(() => {
 		time--;
@@ -73,7 +74,7 @@ const setScoreToZero = () => {
 const setTimeoutForGameEnd = () => {
 	setTimeout(() => {
 		timeUp = true;
-	}, 10000);
+	}, gameTime);
 }
 
 function whack(e) {
